@@ -4,7 +4,7 @@ This is the CSS template from http://www.templatemo.com/live/templatemo_495_metr
 ## Getting started
 To get started, clone this repository and then install the needed gems:
 ```
-$ git clone
+$ git clone https://github.com/jimmy2046/static1.git
 ```
 
 Next, run bundle install:
