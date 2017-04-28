@@ -26,3 +26,9 @@ Navigate the website, in a browser:
 ```
 http://localhost:3000/
 ```
+
+## Revision History
+Apr 27, 2017
+```
+Re-written the image_tag for page home.html.erb
+```
