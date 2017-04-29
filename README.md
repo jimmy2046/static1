@@ -32,3 +32,9 @@ Apr 27, 2017
 ```
 Re-written the image_tag for page home.html.erb
 ```
+
+Apr 29, 2017
+```
+Make the images clickable by this pattern:
+<%= link_to image_tag("picture01.jpg", alt: "Image Description"), image_path("picture01.jpg") %>
+```
