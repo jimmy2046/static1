@@ -1,3 +1,4 @@
+<% provide(:title, "About") %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Metro Fit - About</title>
+    <title><%= yield(:title) %></title>
 <!--
 Metro Fit
 http://www.templatemo.com/tm-495-metro-fit
@@ -33,9 +34,7 @@ http://www.templatemo.com/tm-495-metro-fit
                     <section class="tm-header-gallery">
                         
                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 tm-pad-0">
-                            <a href="img/img-21-01.jpg">
-                                <img src="img/img-21-01.jpg" alt="Image" class="img-fluid tm-header-img">        
-                            </a>                          
+                            <%= image_tag("img-21-01.jpg", :alt => "Image", :class => "img-fluid tm-header-img") %>
                         </div>
                         
                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 tm-pad-0">
@@ -45,13 +44,11 @@ http://www.templatemo.com/tm-495-metro-fit
                                 <h2 class="tm-site-name-h2">by templatemo</h2>    
                             </div>
                             
-                            <img src="img/logo-bg.jpg" alt="Image" class="img-fluid tm-header-img">
+                            <%= image_tag("logo-bg.jpg", :alt => "Image", :class => "img-fluid tm-header-img") %>
                         </div>
                                         
                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 tm-pad-0">
-                            <a href="img/img-21-03.jpg">
-                                <img src="img/img-21-03.jpg" alt="Image" class="img-fluid tm-header-img">    
-                            </a>                      
+                            <%= image_tag("img-21-03.jpg", :alt => "Image", :class => "img-fluid tm-header-img") %>
                         </div>                
 
                     </section>
@@ -67,16 +64,18 @@ http://www.templatemo.com/tm-495-metro-fit
                                 
                                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 tm-pad-0 tm-nav-item-pair">
                                     <div class="nav-item">
-                                        <a class="nav-link" href="index.html">Home</a>
+                                      <%= link_to "Home", home_path %>
                                     </div>
                                     <div class="nav-item active">
-                                        <a class="nav-link" href="about.html">About</a>
+                                      <%= link_to "About", about_path %>
                                     </div>    
                                 </div>
                                 
                                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 tm-pad-0 tm-nav-item-pair">
                                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 nav-item">
-                                        <a class="nav-link" href="services.html">Services</a>
+                                        <div class="nav-link">
+                                          <%= link_to "Services", services_path %>
+                                        </div>
                                     </div>
                                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 nav-item">
                                         <a class="nav-link" href="blog.html">Blog</a>
@@ -127,25 +126,25 @@ http://www.templatemo.com/tm-495-metro-fit
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
                     <div class="tm-about-box-2">
-                        <img src="img/img-11-01.jpg" alt="Image" class="img-fluid">
+                        <%= image_tag("img-11-01.jpg", :alt => "Image", :class => "img-fluid") %>
                         <p class="tm-about-description-2">Ut maximus, purus venenatis volutpat pellentesque, lectus metus egestas lacus, nec scelerisque magna tortor eget massa. Nulla in lacinia metus. #000</p>    
                     </div>                    
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
                     <div class="tm-about-box-2">
-                        <img src="img/img-11-03.jpg" alt="Image" class="img-fluid">
+                        <%= image_tag("img-11-03.jpg", :alt => "Image", :class => "img-fluid") %>
                         <p class="tm-about-description-2">Duis augue risus, auctor nec neque eu, sodales egestas ligula. Ut maximus, purus venenatis volutpat pellentesque, lectus metus egestas lacus, nec scelerisque.</p>    
                     </div>                    
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
                     <div class="tm-about-box-2">
-                        <img src="img/img-11-05.jpg" alt="Image" class="img-fluid">
+                        <%= image_tag("img-11-05.jpg", :alt => "Image", :class => "img-fluid") %>
                         <p class="tm-about-description-2">Nulla in lacinia metus. Quisque hendrerit ullamcorper lacus eget tincidunt. Praesent convallis felis sed efficitur porta. Duis vitae eros elit. Nam vitae quam.</p>    
                     </div>                    
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
                     <div class="tm-about-box-2">
-                        <img src="img/img-11-07.jpg" alt="Image" class="img-fluid">
+                        <%= image_tag("img-11-07.jpg", :alt => "Image", :class => "img-fluid") %>
                         <p class="tm-about-description-2">Praesent convallis felis sed efficitur porta. Duis vitae eros elit. Nam vitae quam metus. Nam congue augue non accumsan consequat. Proin consequat elit.</p>    
                     </div>                    
                 </div>
@@ -170,9 +169,21 @@ http://www.templatemo.com/tm-495-metro-fit
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <nav class="tm-flex-center">
                         <ul class="tm-nav-2">
-                            <li class="tm-nav-item-2"><a href="index.html" class="tm-nav-link-2">Home</a></li>
-                            <li class="tm-nav-item-2"><a href="about.html" class="tm-nav-link-2">About</a></li>
-                            <li class="tm-nav-item-2"><a href="services.html" class="tm-nav-link-2">Services</a></li>
+                            <li class="tm-nav-item-2">
+                                <div class="tm-nav-link-2">
+                                  <%= link_to "Home", home_path %>
+                                </div>
+                            </li>
+                            <li class="tm-nav-item-2">
+                                <div class="tm-nav-link-2">
+                                  <%= link_to "About", about_path %>
+                                </div>
+                            </li>
+                            <li class="tm-nav-item-2">
+                                <div class="tm-nav-link-2">
+                                  <%= link_to "Services", services_path %>
+                                </div>
+                            </li>
                             <li class="tm-nav-item-2"><a href="blog.html" class="tm-nav-link-2">Blog</a></li>
                             <li class="tm-nav-item-2"><a href="contact.html" class="tm-nav-link-2">Contact</a></li>
                         </ul>
@@ -183,11 +194,11 @@ http://www.templatemo.com/tm-495-metro-fit
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <div class="tm-social-icons-container text-xs-center">
-                        <a href="#" class="tm-social-link"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="tm-social-link"><i class="fa fa-google-plus"></i></a>
-                        <a href="#" class="tm-social-link"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="tm-social-link"><i class="fa fa-behance"></i></a>
-                        <a href="#" class="tm-social-link"><i class="fa fa-linkedin"></i></a>
+                        <%= image_tag("facebook_icon.jpg") %>
+                        <%= image_tag("google_plus_icon.jpg") %>
+                        <%= image_tag("twitter_icon.jpg") %>
+                        <%= image_tag("be_icon.jpg") %>
+                        <%= image_tag("linkedin_icon.jpg") %>
                     </div>
                 </div>
             </div>
@@ -196,7 +207,7 @@ http://www.templatemo.com/tm-495-metro-fit
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <p class="text-xs-center tm-copyright">Copyright &copy; 2016 Your Company 
                     
-                    | Design: <a href="http://www.google.com/+templatemo" target="_parent">Templatemo</a></p>
+                    | Design: <a href="#" target="_parent">Templatemo</a></p>
                 </div>
             </footer>
             
